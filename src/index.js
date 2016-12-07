@@ -30,7 +30,7 @@ function prepareSassInput(input) {
 }
 
 function sassRender(input, options) {
-    const result = sass.renderSync(_.extend(
+    const result = sass.renderSync(_.assign(
         {
             data: input,
             functions: Object.assign({}, jsonFns)
