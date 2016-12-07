@@ -70,7 +70,7 @@ $corgle: null;
 
 ## API
 
-### sassVarsSync(str, [opts])
+### sassVarsSync(str, options)
 
 Returns: `Object`
 

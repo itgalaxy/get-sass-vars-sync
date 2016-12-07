@@ -8,7 +8,7 @@ const fixturesDir = path.join(__dirname, 'fixtures');
 
 test('should create JSON object from Sass variables', async (t) => {
     const expectedFile = await pify(fs.readFile)(path.join(fixturesDir, 'basic.expected.json'));
-    const expectedVariables = await JSON.parse(expectedFile.toString());
+    const expectedVariables = JSON.parse(await expectedFile.toString());
     const source = await pify(fs.readFile)(path.join(fixturesDir, 'index.scss'));
     const actualVariables = getSassVarsSync(source);
 
@@ -17,7 +17,7 @@ test('should create JSON object from Sass variables', async (t) => {
 
 test('should camelcase Sass variable names and use them as JSON object keys', async (t) => {
     const expectedFile = await pify(fs.readFile)(path.join(fixturesDir, 'camelcase.expected.json'));
-    const expectedVariables = await JSON.parse(expectedFile.toString());
+    const expectedVariables = JSON.parse(await expectedFile.toString());
     const source = await pify(fs.readFile)(path.join(fixturesDir, 'index.scss'));
     const actualVariables = getSassVarsSync(source, {
         camelize: true
@@ -28,7 +28,7 @@ test('should camelcase Sass variable names and use them as JSON object keys', as
 
 test('should use provided Sass options for Sass rendering', async (t) => {
     const expectedFile = await pify(fs.readFile)(path.join(fixturesDir, 'sass-options.expected.json'));
-    const expectedVariables = await JSON.parse(expectedFile.toString());
+    const expectedVariables = JSON.parse(await expectedFile.toString());
     const source = await pify(fs.readFile)(path.join(fixturesDir, 'index.scss'));
     const actualVariables = getSassVarsSync(source, {
         sassOptions: {
