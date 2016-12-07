@@ -37,13 +37,16 @@ function prepareSassInput(input) {
 }
 
 function sassRender(input, options) {
-    const result = sass.renderSync(_.assign(
-        {
-            data: input,
-            functions: Object.assign({}, jsonFns)
-        },
-        options.sassOptions
-    ));
+    const result = sass.renderSync(
+        Object.assign(
+            {},
+            {
+                data: input,
+                functions: Object.assign({}, jsonFns)
+            },
+            options.sassOptions
+        )
+    );
 
     return result.css.toString();
 }
