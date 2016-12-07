@@ -30,7 +30,8 @@
         "lodash": "^4.15.0",
         "node-sass-json-functions": "^1.1.0",
         "postcss": "^5.1.0",
-        "strip-outer": "^1.0.0"
+        "strip-outer": "^1.0.0",
+        "postcss-scss": "0.4.0"
     },
     "devDependencies": {
         "ajv-cli": "~1.1.0",

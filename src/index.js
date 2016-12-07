@@ -4,9 +4,16 @@ import jsonFns from 'node-sass-json-functions';
 import postcss from 'postcss';
 import sass from 'node-sass';
 import stripOuter from 'strip-outer';
+import syntax from 'postcss-scss';
 
 function prepareSassInput(input) {
-    const result = postcss().process(input).sync();
+    const result = postcss().process(
+        input,
+        {
+            syntax
+        }
+    )
+        .sync();
     const root = result.root;
     const node = postcss.rule({
         selector: '.__sassVars__'
