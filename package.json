@@ -1,6 +1,6 @@
 {
     "name": "get-sass-vars-sync",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "description": "Get Sass variables synchronously as JSON object.",
     "author": "itgalaxy <development@itgalaxy.company>",
     "license": "MIT",
@@ -41,10 +41,10 @@
         "babel-preset-es2015": "^6.9.0",
         "babel-preset-stage-0": "^6.5.0",
         "babel-register": "^6.9.0",
-        "eslint": "~3.11.0",
+        "eslint": "~3.12.0",
         "eslint-plugin-ava": "~4.0.0",
         "eslint-plugin-import": "~2.2.0",
-        "eslint-plugin-itgalaxy": "~32.0.0",
+        "eslint-plugin-itgalaxy": "~33.0.0",
         "eslint-plugin-jsx-a11y": "~3.0.0",
         "eslint-plugin-lodash": "~2.2.0",
         "eslint-plugin-node": "~3.0.0",
@@ -62,7 +62,7 @@
         "rimraf": "^2.5.2"
     },
     "peerDependencies": {
-        "node-sass": "^3.8.0"
+        "node-sass": "^3.8.0 || ^4.0.0"
     },
     "engines": {
         "node": ">=6"
