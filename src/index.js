@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import camelcaseKeys from 'camelcase-keys';
-import jsonFns from 'node-sass-json-functions';
+import jsonFns from 'node-sass-functions-json';
 import postcss from 'postcss';
 import sass from 'node-sass';
 import stripOuter from 'strip-outer';

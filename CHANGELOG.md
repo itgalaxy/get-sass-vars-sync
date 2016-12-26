@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# 3.0.0 - 2016-12-26
+
+- Changed: minimum required version `node-sass` is now `^4.0.0`. 
+
 # 2.0.1 - 2016-12-12
 
 - Chore **(Patch update)**: supported `node-sass` with `4.0.0` and above versions.

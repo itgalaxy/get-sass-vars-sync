@@ -1,7 +1,7 @@
 {
     "name": "get-sass-vars-sync",
-    "version": "2.0.1",
-    "description": "Get Sass variables synchronously as JSON object.",
+    "version": "3.0.0",
+    "description": "Get Sass variables synchronously as JSON object",
     "author": "itgalaxy <development@itgalaxy.company>",
     "license": "MIT",
     "main": "dist/index.js",
@@ -28,7 +28,7 @@
     "dependencies": {
         "camelcase-keys": "^4.0.0",
         "lodash": "^4.15.0",
-        "node-sass-json-functions": "^1.1.0",
+        "node-sass-functions-json": "^1.0.0-alpha.1",
         "postcss": "^5.1.0",
         "strip-outer": "^1.0.0",
         "postcss-scss": "0.4.0"
@@ -54,6 +54,7 @@
         "npmpub": "^3.1.0",
         "npm-run-all": "^3.1.0",
         "nyc": "^10.0.0",
+        "node-sass": "^4.0.0",
         "package-schema": "^1.0.0",
         "pify": "^2.3.0",
         "remark-cli": "^2.1.0",
@@ -62,7 +63,7 @@
         "rimraf": "^2.5.2"
     },
     "peerDependencies": {
-        "node-sass": "^3.8.0 || ^4.0.0"
+        "node-sass": "^4.0.0"
     },
     "engines": {
         "node": ">=6"
