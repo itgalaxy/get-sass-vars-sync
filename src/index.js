@@ -14,7 +14,7 @@ function prepareSassInput(input) {
         }
     )
         .sync();
-    const root = result.root;
+    const { root } = result;
     const node = postcss.rule({
         selector: '.__sassVars__'
     });
@@ -53,7 +53,7 @@ function sassRender(input, options) {
 
 function exportVariables(input, options) {
     const result = postcss().process(input).sync();
-    const root = result.root;
+    const { root } = result;
     const data = {};
 
     root.walkRules('.__sassVars__', (rule) => {
