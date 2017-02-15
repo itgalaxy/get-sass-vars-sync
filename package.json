@@ -31,7 +31,7 @@
         "node-sass-functions-json": "^1.0.0-alpha.1",
         "postcss": "^5.2.9",
         "strip-outer": "^1.0.0",
-        "postcss-scss": "0.4.0"
+        "postcss-scss": "0.4.1"
     },
     "devDependencies": {
         "ajv-cli": "^1.1.0",
