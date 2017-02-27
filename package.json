@@ -58,9 +58,8 @@
         "node-sass": "^4.0.0",
         "package-schema": "^1.0.0",
         "pify": "^2.3.0",
-        "remark-cli": "^2.1.0",
-        "remark-lint": "^5.4.0",
-        "remark-preset-lint-itgalaxy": "^4.0.0",
+        "remark-cli": "^3.0.0",
+        "remark-preset-lint-itgalaxy": "^5.0.0",
         "rimraf": "^2.5.2"
     },
     "peerDependencies": {
@@ -114,7 +113,7 @@
         "root": true
     },
     "remarkConfig": {
-        "presets": [
+        "plugins": [
             "remark-preset-lint-itgalaxy"
         ]
     }
