@@ -1,6 +1,6 @@
 {
     "name": "get-sass-vars-sync",
-    "version": "3.0.0",
+    "version": "4.0.0",
     "description": "Get Sass variables synchronously as JSON object",
     "author": "itgalaxy <development@itgalaxy.company>",
     "license": "MIT",
@@ -29,7 +29,7 @@
         "camelcase-keys": "^4.0.0",
         "lodash": "^4.15.0",
         "node-sass-functions-json": "^1.0.0",
-        "postcss": "^6.0.0",
+        "postcss": "^6.0.1",
         "strip-outer": "^1.0.0",
         "postcss-scss": "1.0.0"
     },
