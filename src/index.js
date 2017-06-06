@@ -2,24 +2,22 @@ import _ from 'lodash';
 import camelcaseKeys from 'camelcase-keys';
 import jsonFns from 'node-sass-functions-json';
 import postcss from 'postcss';
-import sass from 'node-sass';
+import sass from 'node-sass'; // eslint-disable-line node/no-unpublished-import
 import stripOuter from 'strip-outer';
 import syntax from 'postcss-scss';
 
 function prepareSassInput(input) {
-    const result = postcss().process(
-        input,
-        {
+    const result = postcss()
+        .process(input, {
             syntax
-        }
-    )
+        })
         .sync();
     const { root } = result;
     const node = postcss.rule({
         selector: '.__sassVars__'
     });
 
-    root.walkDecls(/^\$/, (decl) => {
+    root.walkDecls(/^\$/, decl => {
         if (decl.parent === root) {
             node.append({
                 prop: 'content',
@@ -56,11 +54,11 @@ function exportVariables(input, options) {
     const { root } = result;
     const data = {};
 
-    root.walkRules('.__sassVars__', (rule) => {
-        rule.walkDecls('content', (decl) => {
+    root.walkRules('.__sassVars__', rule => {
+        rule.walkDecls('content', decl => {
             const val = decl.value.split(' ":" ');
 
-            data[stripOuter(val[0], '"')] = JSON.parse(stripOuter(val[1], '\''));
+            data[stripOuter(val[0], '"')] = JSON.parse(stripOuter(val[1], "'"));
         });
     });
 
@@ -76,7 +74,7 @@ function exportVariables(input, options) {
     return data;
 }
 
-export default function (inputCssStr, options = {}) {
+export default function(inputCssStr, options = {}) {
     const prepareString = prepareSassInput(inputCssStr);
     const cssString = sassRender(prepareString, options);
 

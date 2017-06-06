@@ -104,7 +104,7 @@ Type: `Object`
 
 ## Related
 
-- [get-sass-vars](https://github.com/niksy/get-sass-vars) - Thanks you for inspiration.
+-   [get-sass-vars](https://github.com/niksy/get-sass-vars) - Thanks you for inspiration.
 
 ## Contribution
 
