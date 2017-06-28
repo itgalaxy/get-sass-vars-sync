@@ -1,6 +1,6 @@
 {
     "name": "get-sass-vars-sync",
-    "version": "4.0.0",
+    "version": "4.0.1",
     "description": "Get Sass variables synchronously as JSON object",
     "author": "itgalaxy <development@itgalaxy.company>",
     "license": "MIT",
@@ -11,11 +11,9 @@
     ],
     "scripts": {
         "lint:eslint": "eslint . --ignore-path .gitignore",
-        "lint:package": "ajv -s ./node_modules/package-schema/schema.json -d package --errors=text",
         "lint:remark": "remark . -i .gitignore -q -f",
         "lint": "npm-run-all -l -p lint:**",
-        "formatter:prettier": "eslint . --fix --ignore-path .gitignore",
-        "formatter": "npm-run-all -l -p formatter:**",
+        "prettier": "eslint . --fix --ignore-path .gitignore",
         "ava": "nyc ava --verbose",
         "pretest": "NODE_ENV=TEST npm run lint",
         "test": "NODE_ENV=TEST npm run ava",
@@ -30,11 +28,11 @@
         "node-sass-functions-json": "^1.0.0",
         "postcss": "^6.0.1",
         "strip-outer": "^1.0.0",
-        "postcss-scss": "1.0.2"
+        "postcss-scss": "^1.0.2"
     },
     "devDependencies": {
         "ajv-cli": "^2.1.0",
-        "ava": "^0.19.0",
+        "ava": "^0.20.0",
         "babel-cli": "^6.11.0",
         "babel-core": "^6.11.0",
         "babel-polyfill": "^6.22.0",
@@ -44,7 +42,7 @@
         "eslint": "^4.1.1",
         "eslint-plugin-ava": "^4.2.1",
         "eslint-plugin-import": "^2.6.0",
-        "eslint-plugin-itgalaxy": "^48.0.0",
+        "eslint-plugin-itgalaxy": "^49.0.0",
         "eslint-plugin-jest": "^20.0.3",
         "eslint-plugin-jsx-a11y": "^6.0.0",
         "eslint-plugin-lodash": "^2.4.3",
@@ -57,14 +55,13 @@
         "npm-run-all": "^4.0.0",
         "nyc": "^11.0.3",
         "node-sass": "^4.0.0",
-        "package-schema": "^1.0.0",
         "pify": "^3.0.0",
         "remark-cli": "^3.0.0",
         "remark-preset-lint-itgalaxy": "^6.0.0",
         "rimraf": "^2.5.2",
         "husky": "^0.14.0",
         "lint-staged": "^4.0.0",
-        "prettier": "^1.4.2"
+        "prettier": "^1.5.2"
     },
     "peerDependencies": {
         "node-sass": "^4.0.0"

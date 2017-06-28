@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+# 4.0.1 - 2017-06-28
+
+-   Fixed: use `^` for `postcss-scss` in `package.json`.
+
 # 4.0.0 - 2017-05-09
 
 -   Changed: minimum required version `postcss` is now `^6.0.1`. 

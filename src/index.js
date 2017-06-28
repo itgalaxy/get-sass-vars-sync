@@ -1,10 +1,10 @@
-import _ from 'lodash';
-import camelcaseKeys from 'camelcase-keys';
-import jsonFns from 'node-sass-functions-json';
-import postcss from 'postcss';
-import sass from 'node-sass'; // eslint-disable-line node/no-unpublished-import
-import stripOuter from 'strip-outer';
-import syntax from 'postcss-scss';
+import _ from "lodash";
+import camelcaseKeys from "camelcase-keys";
+import jsonFns from "node-sass-functions-json";
+import postcss from "postcss";
+import sass from "node-sass"; // eslint-disable-line node/no-unpublished-import
+import stripOuter from "strip-outer";
+import syntax from "postcss-scss";
 
 function prepareSassInput(input) {
     const result = postcss()
@@ -14,13 +14,13 @@ function prepareSassInput(input) {
         .sync();
     const { root } = result;
     const node = postcss.rule({
-        selector: '.__sassVars__'
+        selector: ".__sassVars__"
     });
 
     root.walkDecls(/^\$/, decl => {
         if (decl.parent === root) {
             node.append({
-                prop: 'content',
+                prop: "content",
 
                 // decl.prop as property is wrapped inside quotes so it doesn’t get transformed with Sass
                 // decl.prop as value will be transformed with Sass
@@ -54,8 +54,8 @@ function exportVariables(input, options) {
     const { root } = result;
     const data = {};
 
-    root.walkRules('.__sassVars__', rule => {
-        rule.walkDecls('content', decl => {
+    root.walkRules(".__sassVars__", rule => {
+        rule.walkDecls("content", decl => {
             const val = decl.value.split(' ":" ');
 
             data[stripOuter(val[0], '"')] = JSON.parse(stripOuter(val[1], "'"));
@@ -64,7 +64,7 @@ function exportVariables(input, options) {
 
     if (options.camelize) {
         return camelcaseKeys(
-            _.mapKeys(data, (val, key) => stripOuter(key, '$')),
+            _.mapKeys(data, (val, key) => stripOuter(key, "$")),
             {
                 recurse: true
             }
