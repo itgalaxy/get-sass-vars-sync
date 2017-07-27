@@ -1,8 +1,8 @@
 # get-sass-vars-sync
 
-[![NPM version](https://img.shields.io/npm/v/get-sass-vars-sync.svg)](https://www.npmjs.org/package/get-sass-vars-sync) 
-[![Travis Build Status](https://img.shields.io/travis/itgalaxy/get-sass-vars-sync/master.svg?label=build)](https://travis-ci.org/itgalaxy/get-sass-vars-sync) 
-[![dependencies Status](https://david-dm.org/itgalaxy/get-sass-vars-sync/status.svg)](https://david-dm.org/itgalaxy/get-sass-vars-sync) 
+[![NPM version](https://img.shields.io/npm/v/get-sass-vars-sync.svg)](https://www.npmjs.org/package/get-sass-vars-sync)
+[![Travis Build Status](https://img.shields.io/travis/itgalaxy/get-sass-vars-sync/master.svg?label=build)](https://travis-ci.org/itgalaxy/get-sass-vars-sync)
+[![dependencies Status](https://david-dm.org/itgalaxy/get-sass-vars-sync/status.svg)](https://david-dm.org/itgalaxy/get-sass-vars-sync)
 [![devDependencies Status](https://david-dm.org/itgalaxy/get-sass-vars-sync/dev-status.svg)](https://david-dm.org/itgalaxy/get-sass-vars-sync?type=dev)
 [![Greenkeeper badge](https://badges.greenkeeper.io/itgalaxy/get-sass-vars-sync.svg)](https://greenkeeper.io/)
 
